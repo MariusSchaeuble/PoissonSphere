@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/Poisson.iml" filepath="$PROJECT_DIR$/.idea/Poisson.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Grundpraktikum/.idea/Grundpraktikum.iml" filepath="$PROJECT_DIR$/../Grundpraktikum/.idea/Grundpraktikum.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/PoissonSphere.iml" filepath="$PROJECT_DIR$/.idea/PoissonSphere.iml" />
     </modules>
   </component>
 </project>
