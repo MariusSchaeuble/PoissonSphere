@@ -26,19 +26,18 @@ def g(y1, y2):
     #return sin(math.atan2(y1, y2)*2)
     #return sin((y1 * y2))
     #return 1
-    return 1
+    return y1
 
 def f(y1, y2):
     #return -10*y1
     #return 0
-    return 1
+    return -1
     #return sin(y1*y2)
 
 def abs2D(k1, k2):
     #print(sqrt(k1**2 + k2**2))
     return sqrt(k1**2 + k2**2)
     #return min([2*r, sqrt(k1 ** 2 + k2 ** 2)])# all occuring points are within the sphere, so abs>2r would be num. artefacts
-    #res = sqrt(k1 ** 2 + k2 ** 2)
 
 
 def Phi(k1, k2):
@@ -51,7 +50,7 @@ def u(x1, x2):
         intFeinheit = 10*gridFeinheit #only few actual x points, but these are presisely calculated by much more y points, to get to the convergence
         phi = linspace(0, 2 * pi, intFeinheit)  # end and start included!
         points = array([r * cos(phi), r * sin(phi)])
-        # trapezregel:
+        # trapezregel trapezoidal rule for integrals:
         delta = r * (phi[1] - phi[0])
 
         def integrand(y1, y2):
@@ -81,7 +80,6 @@ def u(x1, x2):
             for i in range(np.shape(X1)[0]):
                 for j in range(np.shape(X1)[1]):
                     integral2 += deltar*deltaphi*b[i, j]*integrand(X1[i, j], X2[i, j])
-
             t2 = integral2
         else:
             t2 = 0
